@@ -39,7 +39,7 @@ namespace Projeto_Final
 
             for (int i = 0; i < lines.Length; i++)
             {
-                ComboBoxItems item = new ComboBoxItems();
+                ComboBoxItemsAssunto item = new ComboBoxItemsAssunto();
 
                 string[] split = lines[i].Split(';');
                 item.Numero = split[0];

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_Final
 {
-    class ComboBoxItems
+    class ComboBoxItemsAssunto
     {
         public string Titulo { set; get; }
         public string Numero { set; get; }
