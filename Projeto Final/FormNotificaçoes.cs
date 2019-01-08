@@ -13,11 +13,7 @@ namespace Projeto_Final
 {
     public partial class FormNotificaçoes : Form
     {
-        //Nome do ficheiro que será criado
         public string file = "assuntos.txt";
-        //Variavel lines que "irá representar" todo o conteúdo do ficheiro
-        public string[] lines;
-        StreamReader sr;
 
         public FormNotificaçoes()
         {
@@ -31,23 +27,20 @@ namespace Projeto_Final
             //Aparacer hora do dia de hoje na textBox6
             HoraTextBox.Text = DateTime.Now.ToString("HH:mm:ss");
 
-            //Aparacer estado Pendente na textbox7
-            EstadoTextBox.Text = "Pendente";
-
             if (File.Exists(file))
             {
-                lines = File.ReadAllLines(file);
-            }
+                string[] lines = File.ReadAllLines(file);
 
-            for (int i = 0; i < lines.Length; i++)
-            {
-                ComboBoxItemsAssunto item = new ComboBoxItemsAssunto();
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    ComboBoxItemsAssunto item = new ComboBoxItemsAssunto();
 
-                string[] split = lines[i].Split(';');
-                item.Numero = split[0];
-                item.Titulo = split[1];
+                    string[] split = lines[i].Split(';');
+                    item.Numero = split[0];
+                    item.Titulo = split[1];
 
-                AssuntoComboBox.Items.Add(item);
+                    AssuntoComboBox.Items.Add(item);
+                }
             }
         }
 
@@ -55,14 +48,20 @@ namespace Projeto_Final
         {
             string file2 = "notificaçoes.txt";
 
-            StreamWriter sw = File.AppendText(file2);
+            StreamWriter sw;
 
             if (!File.Exists(file2))
             {
-                File.CreateText(file2);
+                sw = File.CreateText(file2);
+            }
+            else
+            {
+                sw = File.AppendText(file2);
             }
 
-            sw.WriteLine(textBox1.Text + ";" + SalaTextBox.Text + ";" + AssuntoComboBox.Text + ";" + ComentarioTextBox.Text + ";" + DataTextBox.Text + ";" + HoraTextBox.Text + ";" + EstadoTextBox.Text);
+            string estado = "pendente";
+
+            sw.WriteLine(SalaTextBox.Text + ";" + AssuntoComboBox.Text + ";" + ComentarioTextBox.Text + ";" + DataTextBox.Text + ";" + HoraTextBox.Text + ";" + estado);
 
             sw.Close();
         }
