@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitialForm));
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.CriarContaButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LoginButton = new System.Windows.Forms.Button();
@@ -97,42 +96,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Software";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label7.Location = new System.Drawing.Point(88, 312);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 15);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Registe-se já!";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label6.Location = new System.Drawing.Point(88, 294);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 15);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ainda não tem uma conta?";
-            // 
             // CriarContaButton
             // 
-            this.CriarContaButton.BackColor = System.Drawing.Color.Silver;
-            this.CriarContaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CriarContaButton.BackColor = System.Drawing.Color.Transparent;
+            this.CriarContaButton.FlatAppearance.BorderSize = 0;
+            this.CriarContaButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.CriarContaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.CriarContaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CriarContaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CriarContaButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.CriarContaButton.Location = new System.Drawing.Point(254, 294);
+            this.CriarContaButton.Location = new System.Drawing.Point(90, 290);
             this.CriarContaButton.Margin = new System.Windows.Forms.Padding(2);
             this.CriarContaButton.Name = "CriarContaButton";
-            this.CriarContaButton.Size = new System.Drawing.Size(103, 32);
+            this.CriarContaButton.Size = new System.Drawing.Size(266, 32);
             this.CriarContaButton.TabIndex = 5;
-            this.CriarContaButton.Text = "Criar Conta";
+            this.CriarContaButton.Text = "Ainda não tem uma conta? Registe-se aqui!";
             this.CriarContaButton.UseVisualStyleBackColor = false;
             this.CriarContaButton.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -211,8 +189,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
             this.panel2.Controls.Add(this.ExitAppButton);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.CriarContaButton);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -262,7 +238,7 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InitialForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -270,7 +246,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -283,8 +258,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button CriarContaButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button LoginButton;
