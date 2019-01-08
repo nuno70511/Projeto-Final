@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComboBoxItems.cs" />
     <Compile Include="FormGerirSoftware.cs">
       <SubType>Form</SubType>
@@ -98,6 +104,9 @@
       <DependentUpon>ServiçosDeInformatica.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGerirSoftware.resx">
       <DependentUpon>FormGerirSoftware.cs</DependentUpon>
     </EmbeddedResource>

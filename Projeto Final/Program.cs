@@ -6,6 +6,11 @@ using System.Windows.Forms;
 
 namespace Projeto_Final
 {
+    public class variaveis
+    {
+        public static Form CurrentForm = Form.ActiveForm;
+    }
+
     static class Program
     {
         /// <summary>

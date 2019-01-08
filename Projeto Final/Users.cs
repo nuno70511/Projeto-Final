@@ -14,6 +14,7 @@ namespace Projeto_Final
         private string user;
         private string email;
         private string pw;
+        private int perfil;
 
         public Users()
         {
@@ -46,18 +47,38 @@ namespace Projeto_Final
                     if (dados[2] == pw)
                     {
                         sr.Close();
-                        return 1;
+
+                        perfil = Convert.ToInt16(dados[3]);
+                        return perfil;
                     }
                     else
                     {
                         sr.Close();
-                        return 0;
+                        return -1;
                     }
                 }
             }
 
             sr.Close();
-            return -1;
+            return -2;
+        }
+
+        public void Sessao(int perfil)
+        {
+            if (perfil == 0)
+            {
+                /* Abrir interface de administrador */
+            }
+            else if (perfil == 1)
+            {
+                ServiçosDeInformatica sdf = new ServiçosDeInformatica();
+                sdf.Show();
+            }
+            else
+            {
+                MenuProfessor prof = new MenuProfessor();
+                prof.Show();
+            }
         }
 
         public int UsernameElegivel()
@@ -76,8 +97,10 @@ namespace Projeto_Final
 
             sr.Close();
 
+            perfil = 2;
+
             StreamWriter sw = File.AppendText(path);
-            sw.WriteLine(user + ";" + email + ';' + pw);
+            sw.WriteLine(user + ';' + email + ';' + pw + ';' + perfil);
             sw.Close();
 
             return 1;

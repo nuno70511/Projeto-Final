@@ -16,6 +16,7 @@ namespace Projeto_Final
         public RegisterForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = 0;
         }
 
         private void ExitRegisterButton_Click(object sender, EventArgs e)

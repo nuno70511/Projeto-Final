@@ -16,6 +16,7 @@ namespace Projeto_Final
         public InitialForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = 0;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -41,11 +42,15 @@ namespace Projeto_Final
 
             Users login = new Users(user, pw);
 
-            if (login.Login() == 1)
+            if (login.Login() >= 0)
             {
-                MessageBox.Show("Sessao iniciada com sucesso.");
+                variaveis.CurrentForm = Form.ActiveForm;
+
+                login.Sessao(login.Login());
+
+                this.Hide();
             }
-            else if (login.Login() == 0)
+            else if (login.Login() == -1)
             {
                 MessageBox.Show("A password esta errada.");
             }
