@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComboBoxItems.cs" />
+    <Compile Include="FormFazerPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFazerPedido.Designer.cs">
+      <DependentUpon>FormFazerPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGerirSoftware.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
       <DependentUpon>ServiçosDeInformatica.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
+    <EmbeddedResource Include="FormFazerPedido.resx">
+      <DependentUpon>FormFazerPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGerirSoftware.resx">
       <DependentUpon>FormGerirSoftware.cs</DependentUpon>
     </EmbeddedResource>
