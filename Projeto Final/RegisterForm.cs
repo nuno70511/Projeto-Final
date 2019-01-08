@@ -38,11 +38,11 @@ namespace Projeto_Final
             }
             else if (CharEspeciais(user))
             {
-                /* O resultado sera apresentado pelo proprio metodo */
+                /* O resultado sera gerido pelo proprio metodo */
             }
             else if (!FormatoEmail(email))
             {
-                /* O resultado sera apresentado pelo proprio metodo */
+                /* O resultado sera gerido pelo proprio metodo */
             }
             else if (pw.Length < 8)
             {
@@ -61,9 +61,6 @@ namespace Projeto_Final
                     MessageBox.Show("Conta criada com sucesso.");
 
                     this.Hide();
-
-                    InitialForm ini = new InitialForm();
-                    ini.Show();
                 }
                 else
                 {
