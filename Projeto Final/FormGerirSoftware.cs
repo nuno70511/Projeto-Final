@@ -19,6 +19,8 @@ namespace Projeto_Final
         {
             InitializeComponent();
 
+            this.FormBorderStyle = 0;
+
             if (!Directory.Exists("salas"))
             {
                 Directory.CreateDirectory("salas");

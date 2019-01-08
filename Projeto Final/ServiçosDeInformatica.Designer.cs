@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiçosDeInformatica));
             this.panel1 = new System.Windows.Forms.Panel();
             this.line1 = new System.Windows.Forms.TextBox();
             this.LogOutButton = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(146, 366);
             this.panel1.TabIndex = 16;
@@ -67,7 +69,7 @@
             this.line1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
             this.line1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.line1.Location = new System.Drawing.Point(2, 84);
-            this.line1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.line1.Margin = new System.Windows.Forms.Padding(2);
             this.line1.Multiline = true;
             this.line1.Name = "line1";
             this.line1.Size = new System.Drawing.Size(141, 8);
@@ -80,7 +82,7 @@
             this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LogOutButton.Location = new System.Drawing.Point(2, 292);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(141, 44);
             this.LogOutButton.TabIndex = 14;
@@ -94,7 +96,7 @@
             this.TopicosDeAssuntoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TopicosDeAssuntoButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TopicosDeAssuntoButton.Location = new System.Drawing.Point(2, 244);
-            this.TopicosDeAssuntoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TopicosDeAssuntoButton.Margin = new System.Windows.Forms.Padding(2);
             this.TopicosDeAssuntoButton.Name = "TopicosDeAssuntoButton";
             this.TopicosDeAssuntoButton.Size = new System.Drawing.Size(143, 44);
             this.TopicosDeAssuntoButton.TabIndex = 13;
@@ -109,7 +111,7 @@
             this.GestaoDeSalasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GestaoDeSalasButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.GestaoDeSalasButton.Location = new System.Drawing.Point(2, 195);
-            this.GestaoDeSalasButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GestaoDeSalasButton.Margin = new System.Windows.Forms.Padding(2);
             this.GestaoDeSalasButton.Name = "GestaoDeSalasButton";
             this.GestaoDeSalasButton.Size = new System.Drawing.Size(141, 44);
             this.GestaoDeSalasButton.TabIndex = 12;
@@ -124,7 +126,7 @@
             this.ConsultasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConsultasButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ConsultasButton.Location = new System.Drawing.Point(2, 146);
-            this.ConsultasButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConsultasButton.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultasButton.Name = "ConsultasButton";
             this.ConsultasButton.Size = new System.Drawing.Size(141, 44);
             this.ConsultasButton.TabIndex = 11;
@@ -138,7 +140,7 @@
             this.GerirSoftwareButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerirSoftwareButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.GerirSoftwareButton.Location = new System.Drawing.Point(2, 98);
-            this.GerirSoftwareButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GerirSoftwareButton.Margin = new System.Windows.Forms.Padding(2);
             this.GerirSoftwareButton.Name = "GerirSoftwareButton";
             this.GerirSoftwareButton.Size = new System.Drawing.Size(141, 44);
             this.GerirSoftwareButton.TabIndex = 10;
@@ -194,15 +196,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Docente";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.panel2.Location = new System.Drawing.Point(146, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(454, 366);
+            this.panel2.TabIndex = 17;
+            // 
             // ServiçosDeInformatica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ServiçosDeInformatica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServiçosDeInformatica";
@@ -225,5 +236,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

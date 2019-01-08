@@ -19,6 +19,8 @@ namespace Projeto_Final
         {
             InitializeComponent();
 
+            this.FormBorderStyle = 0;
+
             string[] importar = File.ReadAllLines(file);
 
             for (int i = 0; i < importar.Length; i++)

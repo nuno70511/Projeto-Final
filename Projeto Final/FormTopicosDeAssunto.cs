@@ -20,6 +20,8 @@ namespace Projeto_Final
         {
             InitializeComponent();
 
+            this.FormBorderStyle = 0;
+
             if (File.Exists(caminho))
             {
                 string[] lerAssuntos = File.ReadAllLines(caminho);

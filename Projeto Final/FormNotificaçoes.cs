@@ -23,6 +23,8 @@ namespace Projeto_Final
         {
             InitializeComponent();
 
+            this.FormBorderStyle = 0;
+
             //Aparecer a data de hoje na TextBox da Hora- DatatextBox
             DataTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
 

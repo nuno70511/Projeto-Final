@@ -15,6 +15,8 @@ namespace Projeto_Final
         public ServiçosDeInformatica()
         {
             InitializeComponent();
+
+            this.FormBorderStyle = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
