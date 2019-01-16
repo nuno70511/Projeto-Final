@@ -21,8 +21,7 @@ namespace Projeto_Final
 
         private void ExitRegisterButton_Click(object sender, EventArgs e)
         {
-            //Fechar RegisterForm
-            this.Close();
+            Application.Exit();
         }
 
         private void ConfirmButton_Click(object sender, EventArgs e)
@@ -99,6 +98,13 @@ namespace Projeto_Final
             {
                 return false;
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            variaveis.CurrentForm.Show();
         }
     }
 }

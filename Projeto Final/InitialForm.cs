@@ -21,18 +21,16 @@ namespace Projeto_Final
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Irá esconder o InitialForm quando pressinar o button "Registar"
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
-            //Quando pressionar "Registar" irá abrir o Form de registo- RegisterForm
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.ShowDialog();
-            //Irá voltar a mostrar o InitialForm quando o RegisterForm for fechado
-            this.Show();
+
+            RegisterForm rf = new RegisterForm();
+            rf.Show();
         }
 
         private void ExitRegisterButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -42,15 +40,16 @@ namespace Projeto_Final
 
             Users login = new Users(user, pw);
 
-            if (login.Login() >= 0)
+            int sessao = login.Login();
+
+            if (sessao >= 0)
             {
                 variaveis.CurrentForm = Form.ActiveForm;
-
-                login.Sessao(login.Login());
-
                 this.Hide();
+
+                login.Sessao(sessao);
             }
-            else if (login.Login() == -1)
+            else if (sessao == -1)
             {
                 MessageBox.Show("A password esta errada.");
             }

@@ -13,62 +13,123 @@ namespace Projeto_Final
 {
     public partial class FormNotificaçoes : Form
     {
-        public string file = "assuntos.txt";
+        string user;
 
-        public FormNotificaçoes()
+        public FormNotificaçoes(string user)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
+            
+            this.user = user;
 
-            //Aparecer a data de hoje na TextBox da Hora- DatatextBox
-            DataTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
-
-            //Aparacer hora do dia de hoje na textBox6
-            HoraTextBox.Text = DateTime.Now.ToString("HH:mm:ss");
-
-            if (File.Exists(file))
+            /* Carregar comboBoxs */
+            string fichSalas = "salas.txt";
+            if (File.Exists(fichSalas))
             {
-                string[] lines = File.ReadAllLines(file);
-
-                for (int i = 0; i < lines.Length; i++)
+                StreamReader sr = File.OpenText(fichSalas);
+                string ln = "";
+                while ((ln = sr.ReadLine()) != null)
                 {
-                    ComboBoxItemsAssunto item = new ComboBoxItemsAssunto();
-
-                    string[] split = lines[i].Split(';');
-                    item.Numero = split[0];
-                    item.Titulo = split[1];
-
-                    AssuntoComboBox.Items.Add(item);
+                    SalaComboBox.Items.Add(ln);
                 }
+                sr.Close();
             }
+
+            string fichAssuntos = "assuntos.txt";
+            if (File.Exists(fichAssuntos))
+            {
+                StreamReader sr = File.OpenText(fichAssuntos);
+                string ln = "";
+                while ((ln = sr.ReadLine()) != null)
+                {
+                    string[] split = ln.Split(';');
+                    AssuntoComboBox.Items.Add(split[1]);
+                }
+                sr.Close();
+            }
+
+
+            /* Mensagem de boas-vindas */
+            string data = DateTime.Now.ToString("dd-MM-yyyy");
+            string hora = DateTime.Now.ToString("HH:mm");
+
+            string boasVindas;
+            int h = DateTime.Now.Hour;
+            if (h < 5 || h > 19)
+            {
+                boasVindas = "Boa noite";
+            }
+            else if (h < 11)
+            {
+                boasVindas = "Bom dia";
+            }
+            else
+            {
+                boasVindas = "Boa tarde";
+            }
+
+            string mensagem = boasVindas + ", " + user + "! " + data + " as " + hora;
+            StatusLabel.Text = mensagem;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string file2 = "notificaçoes.txt";
+            string fichNotif = "notificaçoes.txt";
+
+            /* Verificar se os campos de entrada estao preenchidos */
+            if (SalaComboBox.Text == "")
+            {
+                StatusLabel.Text = "Nao foi indicada uma sala.";
+            }
+            else if (AssuntoComboBox.Text == "")
+            {
+                StatusLabel.Text = "Nao foi indicado nenhum assunto.";
+            }
+            else if (ComentarioTextBox.Text == "")
+            {
+                StatusLabel.Text = "Por favor, especifique o seu problema.";
+            }
+
 
             StreamWriter sw;
 
-            if (!File.Exists(file2))
+            if (!File.Exists(fichNotif))
             {
-                sw = File.CreateText(file2);
+                sw = File.CreateText(fichNotif);
             }
             else
             {
-                sw = File.AppendText(file2);
+                sw = File.AppendText(fichNotif);
             }
 
-            string estado = "pendente";
 
-            sw.WriteLine(SalaTextBox.Text + ";" + AssuntoComboBox.Text + ";" + ComentarioTextBox.Text + ";" + DataTextBox.Text + ";" + HoraTextBox.Text + ";" + estado);
+            /* Dados a armazenar no ficheiro (excepto variavel global user) */
+            string sala = SalaComboBox.Text;
+            string comentario = ComentarioTextBox.Text;
+            int indiceAssunto = Convert.ToInt16(AssuntoComboBox.SelectedIndex) + 1; /* Associar o assunto escolhido a um indice */
+            string assunto = indiceAssunto.ToString("00");
+            string data = DateTime.Now.ToString("yyyy/MM/dd");
+            string hora = DateTime.Now.ToString("HH:mm");
+            string estado = "Pendente";
+
+            sw.WriteLine(user + ';' + sala + ';' + assunto + ';' + comentario + ';' + data + ';' + hora + ';' + estado);
 
             sw.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

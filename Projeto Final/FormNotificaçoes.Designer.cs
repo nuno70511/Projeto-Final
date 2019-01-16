@@ -29,15 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNotificaçoes));
-            this.AssuntoComboBox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.HoraTextBox = new System.Windows.Forms.TextBox();
-            this.DataTextBox = new System.Windows.Forms.TextBox();
             this.ComentarioTextBox = new System.Windows.Forms.TextBox();
-            this.SalaTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.AssuntoComboBox = new System.Windows.Forms.ComboBox();
+            this.SalaComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -49,22 +45,15 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // AssuntoComboBox
-            // 
-            this.AssuntoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.AssuntoComboBox.FormattingEnabled = true;
-            this.AssuntoComboBox.Location = new System.Drawing.Point(140, 72);
-            this.AssuntoComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.AssuntoComboBox.Name = "AssuntoComboBox";
-            this.AssuntoComboBox.Size = new System.Drawing.Size(164, 21);
-            this.AssuntoComboBox.TabIndex = 30;
             // 
             // button2
             // 
@@ -75,55 +64,25 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 30);
             this.button2.TabIndex = 29;
-            this.button2.Text = "Guardar";
+            this.button2.Text = "Enviar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // HoraTextBox
-            // 
-            this.HoraTextBox.Location = new System.Drawing.Point(140, 249);
-            this.HoraTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.HoraTextBox.Name = "HoraTextBox";
-            this.HoraTextBox.Size = new System.Drawing.Size(164, 20);
-            this.HoraTextBox.TabIndex = 27;
-            this.HoraTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // DataTextBox
-            // 
-            this.DataTextBox.Location = new System.Drawing.Point(140, 212);
-            this.DataTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.DataTextBox.Name = "DataTextBox";
-            this.DataTextBox.Size = new System.Drawing.Size(164, 20);
-            this.DataTextBox.TabIndex = 26;
-            this.DataTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // ComentarioTextBox
             // 
-            this.ComentarioTextBox.Location = new System.Drawing.Point(139, 110);
+            this.ComentarioTextBox.Location = new System.Drawing.Point(38, 141);
             this.ComentarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ComentarioTextBox.Multiline = true;
             this.ComentarioTextBox.Name = "ComentarioTextBox";
-            this.ComentarioTextBox.Size = new System.Drawing.Size(164, 85);
+            this.ComentarioTextBox.Size = new System.Drawing.Size(266, 124);
             this.ComentarioTextBox.TabIndex = 25;
-            // 
-            // SalaTextBox
-            // 
-            this.SalaTextBox.Location = new System.Drawing.Point(140, 34);
-            this.SalaTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.SalaTextBox.Name = "SalaTextBox";
-            this.SalaTextBox.Size = new System.Drawing.Size(164, 20);
-            this.SalaTextBox.TabIndex = 24;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.AssuntoComboBox);
+            this.groupBox1.Controls.Add(this.SalaComboBox);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.HoraTextBox);
-            this.groupBox1.Controls.Add(this.DataTextBox);
             this.groupBox1.Controls.Add(this.ComentarioTextBox);
-            this.groupBox1.Controls.Add(this.SalaTextBox);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
@@ -135,27 +94,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label6
+            // AssuntoComboBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 247);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 18);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Hora:";
+            this.AssuntoComboBox.FormattingEnabled = true;
+            this.AssuntoComboBox.Location = new System.Drawing.Point(141, 70);
+            this.AssuntoComboBox.Name = "AssuntoComboBox";
+            this.AssuntoComboBox.Size = new System.Drawing.Size(163, 21);
+            this.AssuntoComboBox.TabIndex = 32;
             // 
-            // label2
+            // SalaComboBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 210);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 18);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Data:";
+            this.SalaComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.SalaComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.SalaComboBox.FormattingEnabled = true;
+            this.SalaComboBox.Location = new System.Drawing.Point(140, 33);
+            this.SalaComboBox.MaxLength = 4;
+            this.SalaComboBox.Name = "SalaComboBox";
+            this.SalaComboBox.Size = new System.Drawing.Size(163, 21);
+            this.SalaComboBox.TabIndex = 31;
             // 
             // label4
             // 
@@ -247,6 +203,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "LogOut";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -279,6 +236,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
             this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Controls.Add(this.statusStrip1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(146, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -286,17 +244,28 @@
             this.panel2.Size = new System.Drawing.Size(454, 366);
             this.panel2.TabIndex = 7;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 344);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(454, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(32, 46);
+            this.label3.Location = new System.Drawing.Point(35, 46);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.Size = new System.Drawing.Size(74, 18);
             this.label3.TabIndex = 2;
-            this.label3.Text = "  Professor";
+            this.label3.Text = "Professor";
             // 
             // panel1
             // 
@@ -316,6 +285,13 @@
             this.panel1.Size = new System.Drawing.Size(146, 366);
             this.panel1.TabIndex = 6;
             // 
+            // StatusLabel
+            // 
+            this.StatusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.StatusLabel.Text = "toolStripStatusLabel1";
+            // 
             // FormNotificaçoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +307,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -338,16 +317,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox AssuntoComboBox;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox HoraTextBox;
-        private System.Windows.Forms.TextBox DataTextBox;
         private System.Windows.Forms.TextBox ComentarioTextBox;
-        private System.Windows.Forms.TextBox SalaTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -361,5 +333,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox SalaComboBox;
+        private System.Windows.Forms.ComboBox AssuntoComboBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
     }
 }

@@ -71,12 +71,12 @@ namespace Projeto_Final
             }
             else if (perfil == 1)
             {
-                ServiçosDeInformatica sdf = new ServiçosDeInformatica();
+                ServiçosDeInformatica sdf = new ServiçosDeInformatica(user);
                 sdf.Show();
             }
             else
             {
-                MenuProfessor prof = new MenuProfessor();
+                MenuProfessor prof = new MenuProfessor(user);
                 prof.Show();
             }
         }

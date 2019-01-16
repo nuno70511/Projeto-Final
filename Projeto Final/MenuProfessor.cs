@@ -12,22 +12,32 @@ namespace Projeto_Final
 {
     public partial class MenuProfessor : Form
     {
-        public MenuProfessor()
+        string user;
+
+        public MenuProfessor(string user)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
+
+            this.user = user;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Irá esconder o MenuProfessor quando pressinar o button "Notificações"
+            Form CurrentForm = Form.ActiveForm;
             this.Hide();
-            //Quando pressionar "Notificações" irá abrir o Form das notificações- FormNotificaçoes
-            FormNotificaçoes formNotificaçoes = new FormNotificaçoes();
-            formNotificaçoes.ShowDialog();
-            //Irá voltar a mostrar o MenuProfessor quando o FormNotificaçoes for fechado
-            this.Show();
+
+            FormNotificaçoes fn = new FormNotificaçoes(user);
+            fn.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

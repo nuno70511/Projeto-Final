@@ -12,11 +12,15 @@ namespace Projeto_Final
 {
     public partial class ServiçosDeInformatica : Form
     {
-        public ServiçosDeInformatica()
+        string user;
+
+        public ServiçosDeInformatica(string user)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
+
+            this.user = user;
         }
 
         private void button1_Click(object sender, EventArgs e)
