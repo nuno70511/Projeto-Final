@@ -51,25 +51,7 @@ namespace Projeto_Final
 
 
             /* Mensagem de boas-vindas */
-            string data = DateTime.Now.ToString("dd-MM-yyyy");
-            string hora = DateTime.Now.ToString("HH:mm");
-
-            string boasVindas;
-            int h = DateTime.Now.Hour;
-            if (h < 5 || h > 19)
-            {
-                boasVindas = "Boa noite";
-            }
-            else if (h < 11)
-            {
-                boasVindas = "Bom dia";
-            }
-            else
-            {
-                boasVindas = "Boa tarde";
-            }
-
-            string mensagem = boasVindas + ", " + user + "! " + data + " as " + hora;
+            string mensagem = metodos.GerarBoasVindas(user);
             StatusLabel.Text = mensagem;
         }
 
@@ -103,7 +85,6 @@ namespace Projeto_Final
                 sw = File.AppendText(fichNotif);
             }
 
-
             /* Dados a armazenar no ficheiro (excepto variavel global user) */
             string sala = SalaComboBox.Text;
             string comentario = ComentarioTextBox.Text;
@@ -113,14 +94,17 @@ namespace Projeto_Final
             string hora = DateTime.Now.ToString("HH:mm");
             string estado = "Pendente";
 
-            sw.WriteLine(user + ';' + sala + ';' + assunto + ';' + comentario + ';' + data + ';' + hora + ';' + estado);
+            /* A alterar posteriormente pelos Servicos de Informatica */
+            string resposta = "N/a";
+
+            sw.WriteLine(user + ';' + sala + ';' + assunto + ';' + comentario + ';' + data + ';' + hora + ';' + estado + ';' + resposta);
 
             sw.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             variaveis.CurrentForm.Show();
         }
 
@@ -130,6 +114,11 @@ namespace Projeto_Final
 
             InitialForm ini = new InitialForm();
             ini.Show();
+        }
+
+        private void ExitRegisterButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -31,17 +31,18 @@ namespace Projeto_Final
             string pw = PwTextBox.Text;
 
 
+            /* Verificar campos de entrada */
             if (user.Length < 5)
             {
                 MessageBox.Show("O username tem de ter no minimo 5 caracteres.");
             }
             else if (CharEspeciais(user))
             {
-                /* O resultado sera gerido pelo proprio metodo */
+                MessageBox.Show("O username contem caracteres especiais.");
             }
             else if (!FormatoEmail(email))
             {
-                /* O resultado sera gerido pelo proprio metodo */
+                MessageBox.Show("O email nao esta no formato correto.");
             }
             else if (pw.Length < 8)
             {
@@ -74,7 +75,6 @@ namespace Projeto_Final
             {
                 if (!char.IsLetterOrDigit(caracter))
                 {
-                    MessageBox.Show("O username contem caracteres especiais.");
                     return true;
                 }
             }
@@ -91,7 +91,6 @@ namespace Projeto_Final
             }
             catch (FormatException)
             {
-                MessageBox.Show("O email nao esta no formato correto.");
                 return false;
             }
             catch

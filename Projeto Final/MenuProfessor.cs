@@ -39,5 +39,19 @@ namespace Projeto_Final
             InitialForm ini = new InitialForm();
             ini.Show();
         }
+
+        private void ExitRegisterButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form CurrentForm = Form.ActiveForm;
+            this.Hide();
+
+            FormEstadoDoPedido edp = new FormEstadoDoPedido(user);
+            edp.Show();
+        }
     }
 }

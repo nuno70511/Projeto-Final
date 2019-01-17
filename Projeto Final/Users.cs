@@ -9,12 +9,16 @@ namespace Projeto_Final
 {
     class Users
     {
-        static string path = "users.txt";
+        static string fichUsers = "users.txt";
 
         private string user;
         private string email;
         private string pw;
         private int perfil;
+
+        /* Credenciais de admin */
+        private string adminUser = "admin";
+        private string adminPw = "trabalho";
 
         public Users()
         {
@@ -33,41 +37,48 @@ namespace Projeto_Final
             this.user = user;
             this.pw = pw;
         }
-
-
+        
         public int Login()
         {
-            StreamReader sr = File.OpenText(path);
-            string ln = "";
-            while ((ln = sr.ReadLine()) != null)
+            if (user == adminUser && pw == adminPw)
             {
-                string[] dados = ln.Split(';');
-                if (dados[0] == user || dados[1] == user)
+                return 0;
+            }
+            else
+            {
+                StreamReader sr = File.OpenText(fichUsers);
+                string ln = "";
+                while ((ln = sr.ReadLine()) != null)
                 {
-                    if (dados[2] == pw)
+                    string[] dados = ln.Split(';');
+                    if (dados[0] == user || dados[1] == user)
                     {
-                        sr.Close();
+                        if (dados[2] == pw)
+                        {
+                            sr.Close();
 
-                        perfil = Convert.ToInt16(dados[3]);
-                        return perfil;
-                    }
-                    else
-                    {
-                        sr.Close();
-                        return -1;
+                            perfil = Convert.ToInt16(dados[3]);
+                            return perfil;
+                        }
+                        else
+                        {
+                            sr.Close();
+                            return -1;
+                        }
                     }
                 }
-            }
 
-            sr.Close();
-            return -2;
+                sr.Close();
+                return -2;
+            }
         }
 
         public void Sessao(int perfil)
         {
             if (perfil == 0)
             {
-                /* Abrir interface de administrador */
+                Admin adm = new Admin();
+                adm.Show();
             }
             else if (perfil == 1)
             {
@@ -83,7 +94,7 @@ namespace Projeto_Final
 
         public int UsernameElegivel()
         {
-            StreamReader sr = File.OpenText(path);
+            StreamReader sr = File.OpenText(fichUsers);
             string ln = "";
             while ((ln = sr.ReadLine()) != null)
             {
@@ -99,7 +110,7 @@ namespace Projeto_Final
 
             perfil = 2;
 
-            StreamWriter sw = File.AppendText(path);
+            StreamWriter sw = File.AppendText(fichUsers);
             sw.WriteLine(user + ';' + email + ';' + pw + ';' + perfil);
             sw.Close();
 

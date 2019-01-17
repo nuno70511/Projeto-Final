@@ -40,6 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ExitRegisterButton = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +113,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Estado do Pedido";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -165,6 +168,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.panel2.Controls.Add(this.ExitRegisterButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(146, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -191,6 +195,25 @@
             this.panel1.Size = new System.Drawing.Size(146, 366);
             this.panel1.TabIndex = 4;
             // 
+            // ExitRegisterButton
+            // 
+            this.ExitRegisterButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitRegisterButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.ExitRegisterButton.FlatAppearance.BorderSize = 0;
+            this.ExitRegisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.ExitRegisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.ExitRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitRegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitRegisterButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ExitRegisterButton.Location = new System.Drawing.Point(387, 342);
+            this.ExitRegisterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitRegisterButton.Name = "ExitRegisterButton";
+            this.ExitRegisterButton.Size = new System.Drawing.Size(65, 22);
+            this.ExitRegisterButton.TabIndex = 6;
+            this.ExitRegisterButton.Text = "X";
+            this.ExitRegisterButton.UseVisualStyleBackColor = false;
+            this.ExitRegisterButton.Click += new System.EventHandler(this.ExitRegisterButton_Click);
+            // 
             // MenuProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,6 +226,7 @@
             this.Name = "MenuProfessor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuProfessor";
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -222,5 +246,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ExitRegisterButton;
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BackButton = new System.Windows.Forms.Button();
             this.ExitRegisterButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.VerifyPwTextBox = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BackButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,6 +65,16 @@
             this.panel2.Size = new System.Drawing.Size(454, 366);
             this.panel2.TabIndex = 4;
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(72, 340);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 4;
+            this.BackButton.Text = "<-";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // ExitRegisterButton
             // 
             this.ExitRegisterButton.BackColor = System.Drawing.Color.Transparent;
@@ -75,7 +85,7 @@
             this.ExitRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitRegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitRegisterButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitRegisterButton.Location = new System.Drawing.Point(387, 341);
+            this.ExitRegisterButton.Location = new System.Drawing.Point(389, 344);
             this.ExitRegisterButton.Margin = new System.Windows.Forms.Padding(2);
             this.ExitRegisterButton.Name = "ExitRegisterButton";
             this.ExitRegisterButton.Size = new System.Drawing.Size(65, 22);
@@ -262,16 +272,6 @@
             this.label1.Size = new System.Drawing.Size(82, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Software";
-            // 
-            // BackButton
-            // 
-            this.BackButton.Location = new System.Drawing.Point(72, 340);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 4;
-            this.BackButton.Text = "<-";
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // RegisterForm
             // 
