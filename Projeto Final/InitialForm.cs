@@ -42,6 +42,7 @@ namespace Projeto_Final
 
             int sessao = login.Login();
 
+            string titLgnFailed = "Oops! Login falhado.";
             if (sessao >= 0)
             {
                 variaveis.CurrentForm = Form.ActiveForm;
@@ -51,11 +52,15 @@ namespace Projeto_Final
             }
             else if (sessao == -1)
             {
-                MessageBox.Show("A password esta errada.");
+                MessageBox.Show("A password esta errada.", titLgnFailed);
+            }
+            else if (sessao == -2)
+            {
+                MessageBox.Show("A conta a que pretende aceder encontra-se inativa.", titLgnFailed);
             }
             else
             {
-                MessageBox.Show("A conta nao existe.");
+                MessageBox.Show("A conta nao existe.", titLgnFailed);
             }
         }
     }

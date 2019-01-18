@@ -59,46 +59,48 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(146, 366);
+            this.panel1.Size = new System.Drawing.Size(282, 622);
             this.panel1.TabIndex = 16;
             // 
             // line1
             // 
             this.line1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
             this.line1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.line1.Location = new System.Drawing.Point(2, 84);
-            this.line1.Margin = new System.Windows.Forms.Padding(2);
+            this.line1.Location = new System.Drawing.Point(3, 119);
+            this.line1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.line1.Multiline = true;
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(141, 8);
+            this.line1.Size = new System.Drawing.Size(277, 10);
             this.line1.TabIndex = 15;
             // 
             // LogOutButton
             // 
+            this.LogOutButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.LogOutButton.FlatAppearance.BorderSize = 0;
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LogOutButton.Location = new System.Drawing.Point(2, 292);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.LogOutButton.Location = new System.Drawing.Point(0, 501);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(141, 44);
+            this.LogOutButton.Size = new System.Drawing.Size(282, 54);
             this.LogOutButton.TabIndex = 14;
             this.LogOutButton.Text = "LogOut";
             this.LogOutButton.UseVisualStyleBackColor = true;
             // 
             // TopicosDeAssuntoButton
             // 
+            this.TopicosDeAssuntoButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.TopicosDeAssuntoButton.FlatAppearance.BorderSize = 0;
             this.TopicosDeAssuntoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TopicosDeAssuntoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TopicosDeAssuntoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TopicosDeAssuntoButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TopicosDeAssuntoButton.Location = new System.Drawing.Point(2, 244);
-            this.TopicosDeAssuntoButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TopicosDeAssuntoButton.Location = new System.Drawing.Point(0, 413);
+            this.TopicosDeAssuntoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TopicosDeAssuntoButton.Name = "TopicosDeAssuntoButton";
-            this.TopicosDeAssuntoButton.Size = new System.Drawing.Size(143, 44);
+            this.TopicosDeAssuntoButton.Size = new System.Drawing.Size(282, 54);
             this.TopicosDeAssuntoButton.TabIndex = 13;
             this.TopicosDeAssuntoButton.Text = "Tópicos de Assunto";
             this.TopicosDeAssuntoButton.UseVisualStyleBackColor = true;
@@ -106,14 +108,15 @@
             // 
             // GestaoDeSalasButton
             // 
+            this.GestaoDeSalasButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.GestaoDeSalasButton.FlatAppearance.BorderSize = 0;
             this.GestaoDeSalasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GestaoDeSalasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GestaoDeSalasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GestaoDeSalasButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.GestaoDeSalasButton.Location = new System.Drawing.Point(2, 195);
-            this.GestaoDeSalasButton.Margin = new System.Windows.Forms.Padding(2);
+            this.GestaoDeSalasButton.Location = new System.Drawing.Point(0, 325);
+            this.GestaoDeSalasButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GestaoDeSalasButton.Name = "GestaoDeSalasButton";
-            this.GestaoDeSalasButton.Size = new System.Drawing.Size(141, 44);
+            this.GestaoDeSalasButton.Size = new System.Drawing.Size(282, 54);
             this.GestaoDeSalasButton.TabIndex = 12;
             this.GestaoDeSalasButton.Text = "Gestão de Salas";
             this.GestaoDeSalasButton.UseVisualStyleBackColor = true;
@@ -121,28 +124,30 @@
             // 
             // ConsultasButton
             // 
+            this.ConsultasButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.ConsultasButton.FlatAppearance.BorderSize = 0;
             this.ConsultasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConsultasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConsultasButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConsultasButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ConsultasButton.Location = new System.Drawing.Point(2, 146);
-            this.ConsultasButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ConsultasButton.Location = new System.Drawing.Point(0, 237);
+            this.ConsultasButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConsultasButton.Name = "ConsultasButton";
-            this.ConsultasButton.Size = new System.Drawing.Size(141, 44);
+            this.ConsultasButton.Size = new System.Drawing.Size(282, 54);
             this.ConsultasButton.TabIndex = 11;
             this.ConsultasButton.Text = "Consultas";
             this.ConsultasButton.UseVisualStyleBackColor = true;
             // 
             // GerirSoftwareButton
             // 
+            this.GerirSoftwareButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.GerirSoftwareButton.FlatAppearance.BorderSize = 0;
             this.GerirSoftwareButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GerirSoftwareButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GerirSoftwareButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GerirSoftwareButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.GerirSoftwareButton.Location = new System.Drawing.Point(2, 98);
-            this.GerirSoftwareButton.Margin = new System.Windows.Forms.Padding(2);
+            this.GerirSoftwareButton.Location = new System.Drawing.Point(0, 155);
+            this.GerirSoftwareButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GerirSoftwareButton.Name = "GerirSoftwareButton";
-            this.GerirSoftwareButton.Size = new System.Drawing.Size(141, 44);
+            this.GerirSoftwareButton.Size = new System.Drawing.Size(282, 54);
             this.GerirSoftwareButton.TabIndex = 10;
             this.GerirSoftwareButton.Text = "Gerir Software";
             this.GerirSoftwareButton.UseVisualStyleBackColor = true;
@@ -151,69 +156,66 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(85, 344);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(183, 589);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 15);
+            this.label8.Size = new System.Drawing.Size(82, 24);
             this.label8.TabIndex = 3;
             this.label8.Text = "ESMAD";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(25, 46);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(108, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 18);
+            this.label3.Size = new System.Drawing.Size(164, 29);
             this.label3.TabIndex = 2;
             this.label3.Text = "de Informática";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(42, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(86, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 18);
+            this.label2.Size = new System.Drawing.Size(106, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Serviços";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(43, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 18);
+            this.label1.Size = new System.Drawing.Size(103, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Docente";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
-            this.panel2.Location = new System.Drawing.Point(146, 0);
+            this.panel2.Location = new System.Drawing.Point(282, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(454, 366);
+            this.panel2.Size = new System.Drawing.Size(729, 622);
             this.panel2.TabIndex = 17;
             // 
             // ServiçosDeInformatica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(1009, 622);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ServiçosDeInformatica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServiçosDeInformatica";

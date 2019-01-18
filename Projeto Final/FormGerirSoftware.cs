@@ -13,6 +13,7 @@ namespace Projeto_Final
 {
     public partial class FormGerirSoftware : Form
     {
+        public static string file = "salas.txt";
         public string caminho = @"salas\";
 
         public FormGerirSoftware()
@@ -21,22 +22,21 @@ namespace Projeto_Final
 
             this.FormBorderStyle = 0;
 
+            string[] importar = File.ReadAllLines(file);
+
+            for (int i = 0; i < importar.Length; i++)
+            {
+                SalaComboBox.Items.Add(importar[i]);
+            }
+
             if (!Directory.Exists("salas"))
             {
                 Directory.CreateDirectory("salas");
-            }
-
-            string[] salas = Directory.GetFiles("salas");
-            for (int i = 0; i < salas.Length; i++)
-            {
-                SalaComboBox.Items.Clear();
-                SalaComboBox.Items.Add(salas[i]);
-            }
+            }        
         }
 
         private void RegistarButton_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
             string ficheiro = caminho + SalaComboBox.Text + ".txt";
 
             StreamWriter sw;
@@ -50,7 +50,7 @@ namespace Projeto_Final
                 sw = File.AppendText(ficheiro);
             }
 
-            string software = textBox1.Text;
+            string software = SoftwareTextBox.Text;
             string data = DataTimePicker.Value.ToString("dd-MM-yyyy");
             string hora = HoraTimePicker.Value.ToString("HH:mm");
             string licenca = LicençaComboBox.Text;

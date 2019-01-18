@@ -45,25 +45,27 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ExitRegisterButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ExitRegisterButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.DocenteTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(220, 284);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(293, 350);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 30);
+            this.button2.Size = new System.Drawing.Size(111, 37);
             this.button2.TabIndex = 29;
             this.button2.Text = "Enviar";
             this.button2.UseVisualStyleBackColor = false;
@@ -71,15 +73,17 @@
             // 
             // ComentarioTextBox
             // 
-            this.ComentarioTextBox.Location = new System.Drawing.Point(38, 141);
-            this.ComentarioTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ComentarioTextBox.Location = new System.Drawing.Point(51, 174);
+            this.ComentarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComentarioTextBox.Multiline = true;
             this.ComentarioTextBox.Name = "ComentarioTextBox";
-            this.ComentarioTextBox.Size = new System.Drawing.Size(266, 124);
+            this.ComentarioTextBox.Size = new System.Drawing.Size(353, 152);
             this.ComentarioTextBox.TabIndex = 25;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DocenteTextBox);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.AssuntoComboBox);
             this.groupBox1.Controls.Add(this.SalaComboBox);
             this.groupBox1.Controls.Add(this.button2);
@@ -87,20 +91,21 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Location = new System.Drawing.Point(50, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(67, 12);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(350, 327);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(467, 402);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // AssuntoComboBox
             // 
             this.AssuntoComboBox.FormattingEnabled = true;
-            this.AssuntoComboBox.Location = new System.Drawing.Point(141, 70);
+            this.AssuntoComboBox.Location = new System.Drawing.Point(187, 95);
+            this.AssuntoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AssuntoComboBox.Name = "AssuntoComboBox";
-            this.AssuntoComboBox.Size = new System.Drawing.Size(163, 21);
+            this.AssuntoComboBox.Size = new System.Drawing.Size(216, 24);
             this.AssuntoComboBox.TabIndex = 32;
             // 
             // SalaComboBox
@@ -108,20 +113,20 @@
             this.SalaComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.SalaComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.SalaComboBox.FormattingEnabled = true;
-            this.SalaComboBox.Location = new System.Drawing.Point(140, 33);
+            this.SalaComboBox.Location = new System.Drawing.Point(188, 54);
+            this.SalaComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SalaComboBox.MaxLength = 4;
             this.SalaComboBox.Name = "SalaComboBox";
-            this.SalaComboBox.Size = new System.Drawing.Size(163, 21);
+            this.SalaComboBox.Size = new System.Drawing.Size(216, 24);
             this.SalaComboBox.TabIndex = 31;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 109);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(47, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 18);
+            this.label4.Size = new System.Drawing.Size(112, 24);
             this.label4.TabIndex = 19;
             this.label4.Text = "Comentário:";
             // 
@@ -129,10 +134,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(36, 70);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(47, 95);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 18);
+            this.label9.Size = new System.Drawing.Size(83, 24);
             this.label9.TabIndex = 18;
             this.label9.Text = "Assunto:";
             // 
@@ -140,10 +144,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(36, 33);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(49, 54);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 18);
+            this.label10.Size = new System.Drawing.Size(51, 24);
             this.label10.TabIndex = 17;
             this.label10.Text = "Sala:";
             // 
@@ -152,21 +155,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(41, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(55, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 18);
+            this.label1.Size = new System.Drawing.Size(81, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Docente";
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
-            this.textBox3.Location = new System.Drawing.Point(4, 165);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Location = new System.Drawing.Point(5, 203);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 9);
+            this.textBox3.Size = new System.Drawing.Size(183, 10);
             this.textBox3.TabIndex = 12;
             // 
             // label5
@@ -174,21 +176,20 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(32, 120);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(43, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 18);
+            this.label5.Size = new System.Drawing.Size(117, 24);
             this.label5.TabIndex = 11;
             this.label5.Text = " Notificações";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
-            this.textBox1.Location = new System.Drawing.Point(6, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(8, 107);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 9);
+            this.textBox1.Size = new System.Drawing.Size(183, 10);
             this.textBox1.TabIndex = 9;
             // 
             // button1
@@ -197,10 +198,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(2, 240);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(3, 295);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 44);
+            this.button1.Size = new System.Drawing.Size(191, 54);
             this.button1.TabIndex = 13;
             this.button1.Text = "LogOut";
             this.button1.UseVisualStyleBackColor = true;
@@ -212,10 +213,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(2, 192);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Location = new System.Drawing.Point(3, 236);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(143, 44);
+            this.button5.Size = new System.Drawing.Size(191, 54);
             this.button5.TabIndex = 8;
             this.button5.Text = "Retroceder";
             this.button5.UseVisualStyleBackColor = true;
@@ -226,10 +227,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(80, 339);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(107, 417);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 18);
+            this.label8.Size = new System.Drawing.Size(82, 24);
             this.label8.TabIndex = 3;
             this.label8.Text = "ESMAD";
             // 
@@ -240,21 +240,60 @@
             this.panel2.Controls.Add(this.statusStrip1);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(146, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(195, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(454, 366);
+            this.panel2.Size = new System.Drawing.Size(605, 450);
             this.panel2.TabIndex = 7;
+            // 
+            // ExitRegisterButton
+            // 
+            this.ExitRegisterButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitRegisterButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.ExitRegisterButton.FlatAppearance.BorderSize = 0;
+            this.ExitRegisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.ExitRegisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.ExitRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitRegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitRegisterButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ExitRegisterButton.Location = new System.Drawing.Point(516, 421);
+            this.ExitRegisterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitRegisterButton.Name = "ExitRegisterButton";
+            this.ExitRegisterButton.Size = new System.Drawing.Size(87, 27);
+            this.ExitRegisterButton.TabIndex = 4;
+            this.ExitRegisterButton.Text = "X";
+            this.ExitRegisterButton.UseVisualStyleBackColor = false;
+            this.ExitRegisterButton.Click += new System.EventHandler(this.ExitRegisterButton_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusLabel});
+            this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.statusStrip1.Location = new System.Drawing.Point(0, 425);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(605, 25);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(151, 20);
+            this.StatusLabel.Text = "toolStripStatusLabel1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(35, 46);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(47, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 18);
+            this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Professor";
             // 
@@ -271,59 +310,39 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(146, 366);
+            this.panel1.Size = new System.Drawing.Size(195, 450);
             this.panel1.TabIndex = 6;
             // 
-            // statusStrip1
+            // DocenteTextBox
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StatusLabel});
-            this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.statusStrip1.Location = new System.Drawing.Point(0, 344);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(454, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.DocenteTextBox.Location = new System.Drawing.Point(187, 19);
+            this.DocenteTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DocenteTextBox.Name = "DocenteTextBox";
+            this.DocenteTextBox.Size = new System.Drawing.Size(217, 22);
+            this.DocenteTextBox.TabIndex = 34;
             // 
-            // StatusLabel
+            // label7
             // 
-            this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(118, 17);
-            this.StatusLabel.Text = "toolStripStatusLabel1";
-            // 
-            // ExitRegisterButton
-            // 
-            this.ExitRegisterButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitRegisterButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
-            this.ExitRegisterButton.FlatAppearance.BorderSize = 0;
-            this.ExitRegisterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
-            this.ExitRegisterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
-            this.ExitRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitRegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitRegisterButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitRegisterButton.Location = new System.Drawing.Point(387, 342);
-            this.ExitRegisterButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ExitRegisterButton.Name = "ExitRegisterButton";
-            this.ExitRegisterButton.Size = new System.Drawing.Size(65, 22);
-            this.ExitRegisterButton.TabIndex = 4;
-            this.ExitRegisterButton.Text = "X";
-            this.ExitRegisterButton.UseVisualStyleBackColor = false;
-            this.ExitRegisterButton.Click += new System.EventHandler(this.ExitRegisterButton_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(48, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 24);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Docente:";
             // 
             // FormNotificaçoes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormNotificaçoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNotificaçoes";
@@ -331,10 +350,10 @@
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +380,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
         private System.Windows.Forms.Button ExitRegisterButton;
+        private System.Windows.Forms.TextBox DocenteTextBox;
+        private System.Windows.Forms.Label label7;
     }
 }

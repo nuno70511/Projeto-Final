@@ -33,7 +33,7 @@ namespace Projeto_Final
                 boasVindas = "Boa tarde";
             }
 
-            string mensagem = boasVindas + ", " + user + "! " + data + " as " + hora;
+            string mensagem = boasVindas + ", " + user + "! " + data + " às " + hora;
 
             return mensagem;
         }

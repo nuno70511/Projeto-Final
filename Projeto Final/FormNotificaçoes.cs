@@ -20,7 +20,9 @@ namespace Projeto_Final
             InitializeComponent();
 
             this.FormBorderStyle = 0;
-            
+
+            DocenteTextBox.Text = user;
+
             this.user = user;
 
             /* Carregar comboBoxs */
@@ -97,7 +99,7 @@ namespace Projeto_Final
             /* A alterar posteriormente pelos Servicos de Informatica */
             string resposta = "N/a";
 
-            sw.WriteLine(user + ';' + sala + ';' + assunto + ';' + comentario + ';' + data + ';' + hora + ';' + estado + ';' + resposta);
+            sw.WriteLine(DocenteTextBox.Text + ";" + ';' + sala + ';' + assunto + ';' + comentario + ';' + data + ';' + hora + ';' + estado + ';' + resposta);
 
             sw.Close();
         }

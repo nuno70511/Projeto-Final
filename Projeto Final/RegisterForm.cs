@@ -32,25 +32,26 @@ namespace Projeto_Final
 
 
             /* Verificar campos de entrada */
+            string titRegFailed = "Oops! Registo falhado.";
             if (user.Length < 5)
             {
-                MessageBox.Show("O username tem de ter no minimo 5 caracteres.");
+                MessageBox.Show("O username tem de ter no minimo 5 caracteres.", titRegFailed);
             }
             else if (CharEspeciais(user))
             {
-                MessageBox.Show("O username contem caracteres especiais.");
+                MessageBox.Show("O username contem caracteres especiais.", titRegFailed);
             }
             else if (!FormatoEmail(email))
             {
-                MessageBox.Show("O email nao esta no formato correto.");
+                MessageBox.Show("O email nao esta no formato correto.", titRegFailed);
             }
             else if (pw.Length < 8)
             {
-                MessageBox.Show("A password tem de ter no minimo 8 caracteres.");
+                MessageBox.Show("A password tem de ter no minimo 8 caracteres.", titRegFailed);
             }
             else if (VerifyPwTextBox.Text != pw)
             {
-                MessageBox.Show("As passwords nao sao iguais.");
+                MessageBox.Show("As passwords nao sao iguais.", titRegFailed);
             }
             else
             {
@@ -58,13 +59,14 @@ namespace Projeto_Final
 
                 if (registo.UsernameElegivel() == 1)
                 {
-                    MessageBox.Show("Conta criada com sucesso.");
+                    MessageBox.Show("Conta criada com sucesso.", "Secesso!");
 
                     this.Hide();
+                    variaveis.CurrentForm.Show();
                 }
                 else
                 {
-                    MessageBox.Show("O username ja esta a ser utilizado.");
+                    MessageBox.Show("O username ja esta a ser utilizado.", titRegFailed);
                 }
             }
         }
