@@ -59,7 +59,7 @@ namespace Projeto_Final
 
                 if (registo.UsernameElegivel() == 1)
                 {
-                    MessageBox.Show("Conta criada com sucesso.", "Secesso!");
+                    MessageBox.Show("Conta criada com sucesso.", "Sucesso!");
 
                     this.Hide();
                     variaveis.CurrentForm.Show();

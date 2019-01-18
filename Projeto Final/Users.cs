@@ -62,6 +62,11 @@ namespace Projeto_Final
                 while ((ln = sr.ReadLine()) != null)
                 {
                     string[] dados = ln.Split(';');
+                    /* Estrutura dos dados:
+                     * [0] username     [3] perfil (Admin(0), SI(1), Professor(2))
+                     * [1] email        [4] estado (ativo(1) || inativo(0))
+                     * [2] password
+
                     /* Permitir uso de username ou email para identificacao da conta */
                     if (dados[0] == user || dados[1] == user)
                     {
