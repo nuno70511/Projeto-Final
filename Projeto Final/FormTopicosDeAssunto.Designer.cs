@@ -57,7 +57,7 @@
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(146, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(454, 366);
             this.panel2.TabIndex = 11;
@@ -69,9 +69,9 @@
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.AssuntoLabel);
             this.groupBox1.Location = new System.Drawing.Point(11, 27);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(434, 297);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -80,7 +80,7 @@
             // 
             this.AdicionarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdicionarButton.Location = new System.Drawing.Point(175, 78);
-            this.AdicionarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdicionarButton.Margin = new System.Windows.Forms.Padding(2);
             this.AdicionarButton.Name = "AdicionarButton";
             this.AdicionarButton.Size = new System.Drawing.Size(86, 27);
             this.AdicionarButton.TabIndex = 25;
@@ -129,7 +129,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(146, 366);
             this.panel1.TabIndex = 10;
@@ -141,18 +141,19 @@
             this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LogOutButton.Location = new System.Drawing.Point(2, 240);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(143, 44);
             this.LogOutButton.TabIndex = 13;
             this.LogOutButton.Text = "LogOut";
             this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
             this.textBox3.Location = new System.Drawing.Point(4, 165);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(138, 9);
@@ -186,7 +187,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
             this.textBox1.Location = new System.Drawing.Point(6, 87);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 9);
@@ -199,12 +200,13 @@
             this.RetrocederButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RetrocederButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RetrocederButton.Location = new System.Drawing.Point(2, 192);
-            this.RetrocederButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RetrocederButton.Margin = new System.Windows.Forms.Padding(2);
             this.RetrocederButton.Name = "RetrocederButton";
             this.RetrocederButton.Size = new System.Drawing.Size(143, 44);
             this.RetrocederButton.TabIndex = 8;
             this.RetrocederButton.Text = "Retroceder";
             this.RetrocederButton.UseVisualStyleBackColor = true;
+            this.RetrocederButton.Click += new System.EventHandler(this.RetrocederButton_Click);
             // 
             // label8
             // 
@@ -262,7 +264,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTopicosDeAssunto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTopicosDeAssunto";

@@ -13,14 +13,18 @@ namespace Projeto_Final
 {
     public partial class FormGerirSoftware : Form
     {
+        string user;
+
         public static string file = "salas.txt";
         public string caminho = @"salas\";
 
-        public FormGerirSoftware()
+        public FormGerirSoftware(string user)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
+
+            this.user = user;
 
             string[] importar = File.ReadAllLines(file);
 
@@ -75,6 +79,20 @@ namespace Projeto_Final
                     SalaComboBox.Items.Add(salas[i]);
                 }
             }
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

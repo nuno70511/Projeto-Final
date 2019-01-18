@@ -25,35 +25,46 @@ namespace Projeto_Final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Irá esconder o InitialForm quando pressinar o button "Registar"
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
-            //Quando pressionar "Registar" irá abrir o Form de registo- RegisterForm
-            FormGerirSoftware formGerirSoftware = new FormGerirSoftware();
-            formGerirSoftware.ShowDialog();
-            //Irá voltar a mostrar o InitialForm quando o RegisterForm for fechado
-            this.Show();
+
+            FormGerirSoftware gs = new FormGerirSoftware(user);
+            gs.Show();
         }
 
         private void GestaoDeSalasButton_Click(object sender, EventArgs e)
         {
-            //Irá esconder o InitialForm quando pressinar o button "Registar"
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
-            //Quando pressionar "Registar" irá abrir o Form de registo- RegisterForm
-            FormGestaoDeSalas formGestaoDeSalas = new FormGestaoDeSalas();
-            formGestaoDeSalas.ShowDialog();
-            //Irá voltar a mostrar o InitialForm quando o RegisterForm for fechado
-            this.Show();
+
+            FormGestaoDeSalas gds = new FormGestaoDeSalas(user);
+            gds.Show();
         }
 
         private void TopicosDeAssuntoButton_Click(object sender, EventArgs e)
         {
-            //Irá esconder o InitialForm quando pressinar o button "Registar"
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
-            //Quando pressionar "Registar" irá abrir o Form de registo- RegisterForm
-            FormTopicosDeAssunto formTopicosDeAssunto = new FormTopicosDeAssunto();
-            formTopicosDeAssunto.ShowDialog();
-            //Irá voltar a mostrar o InitialForm quando o RegisterForm for fechado
-            this.Show();
+
+            FormTopicosDeAssunto tda = new FormTopicosDeAssunto(user);
+            tda.Show();
+        }
+
+        private void ConsultasButton_Click(object sender, EventArgs e)
+        {
+            variaveis.CurrentForm = ActiveForm;
+            this.Hide();
+
+            FormConsultas c = new FormConsultas(user);
+            c.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

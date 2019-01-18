@@ -13,12 +13,18 @@ namespace Projeto_Final
 {
     public partial class FormConsultas : Form
     {
+        string user;
+
         public static string file = "salas.txt";
         public string caminho = @"salas\";
 
-        public FormConsultas()
+        public FormConsultas(string user)
         {
             InitializeComponent();
+
+            this.FormBorderStyle = 0;
+
+            this.user = user;
 
             string[] importar = File.ReadAllLines(file);
 

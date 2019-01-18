@@ -13,13 +13,17 @@ namespace Projeto_Final
 {
     public partial class FormGestaoDeSalas : Form
     {
+        string user;
 
         public static string file = "salas.txt";
-        public FormGestaoDeSalas()
+
+        public FormGestaoDeSalas(string user)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
+
+            this.user = user;
 
             string[] importar = File.ReadAllLines(file);
 
@@ -81,6 +85,20 @@ namespace Projeto_Final
                 sw.WriteLine(listBox1.Items[i]);
             }
             sw.Close();
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }
