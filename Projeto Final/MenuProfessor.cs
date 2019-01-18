@@ -25,7 +25,7 @@ namespace Projeto_Final
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form CurrentForm = Form.ActiveForm;
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
 
             FormNotificaçoes fn = new FormNotificaçoes(user);

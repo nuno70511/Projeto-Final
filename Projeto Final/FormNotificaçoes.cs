@@ -106,7 +106,7 @@ namespace Projeto_Final
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             variaveis.CurrentForm.Show();
         }
 
