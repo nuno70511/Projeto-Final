@@ -64,6 +64,12 @@
     <Compile Include="FormEstadoDoPedido.Designer.cs">
       <DependentUpon>FormEstadoDoPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGerirPerfis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGerirPerfis.Designer.cs">
+      <DependentUpon>FormGerirPerfis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGerirSoftware.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="FormNotificaçoes.Designer.cs">
       <DependentUpon>FormNotificaçoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPerfis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerfis.Designer.cs">
+      <DependentUpon>FormPerfis.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTopicosDeAssunto.cs">
       <SubType>Form</SubType>
@@ -124,6 +136,9 @@
     <EmbeddedResource Include="FormEstadoDoPedido.resx">
       <DependentUpon>FormEstadoDoPedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGerirPerfis.resx">
+      <DependentUpon>FormGerirPerfis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGerirSoftware.resx">
       <DependentUpon>FormGerirSoftware.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNotificaçoes.resx">
       <DependentUpon>FormNotificaçoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPerfis.resx">
+      <DependentUpon>FormPerfis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTopicosDeAssunto.resx">
       <DependentUpon>FormTopicosDeAssunto.cs</DependentUpon>

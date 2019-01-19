@@ -13,12 +13,20 @@ namespace Projeto_Final
 {
     public partial class FormConsultas : Form
     {
+        string user;
+        int perfil;
+
         public static string file = "salas.txt";
         public string caminho = @"salas\";
 
-        public FormConsultas()
+        public FormConsultas(string user, int perfil)
         {
             InitializeComponent();
+
+            this.FormBorderStyle = 0;
+
+            this.user = user;
+            this.perfil = perfil;
 
             string[] importar = File.ReadAllLines(file);
 
@@ -54,6 +62,20 @@ namespace Projeto_Final
             {
                 MessageBox.Show("Não existem dados a apresentar.");
             }
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

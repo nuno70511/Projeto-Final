@@ -13,47 +13,60 @@ namespace Projeto_Final
     public partial class ServiçosDeInformatica : Form
     {
         string user;
+        int perfil;
 
-        public ServiçosDeInformatica(string user)
+        public ServiçosDeInformatica(string user, int perfil)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
 
             this.user = user;
+            this.perfil = perfil;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Irá esconder o InitialForm quando pressinar o button "Registar"
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
-            //Quando pressionar "Registar" irá abrir o Form de registo- RegisterForm
-            FormGerirSoftware formGerirSoftware = new FormGerirSoftware();
-            formGerirSoftware.ShowDialog();
-            //Irá voltar a mostrar o InitialForm quando o RegisterForm for fechado
-            this.Show();
+
+            FormGerirSoftware gs = new FormGerirSoftware(user, perfil);
+            gs.Show();
         }
 
         private void GestaoDeSalasButton_Click(object sender, EventArgs e)
         {
-            //Irá esconder o InitialForm quando pressinar o button "Registar"
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
-            //Quando pressionar "Registar" irá abrir o Form de registo- RegisterForm
-            FormGestaoDeSalas formGestaoDeSalas = new FormGestaoDeSalas();
-            formGestaoDeSalas.ShowDialog();
-            //Irá voltar a mostrar o InitialForm quando o RegisterForm for fechado
-            this.Show();
+
+            FormGestaoDeSalas gds = new FormGestaoDeSalas(user, perfil);
+            gds.Show();
         }
 
         private void TopicosDeAssuntoButton_Click(object sender, EventArgs e)
         {
-            //Irá esconder o InitialForm quando pressinar o button "Registar"
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
-            //Quando pressionar "Registar" irá abrir o Form de registo- RegisterForm
-            FormTopicosDeAssunto formTopicosDeAssunto = new FormTopicosDeAssunto();
-            formTopicosDeAssunto.ShowDialog();
-            //Irá voltar a mostrar o InitialForm quando o RegisterForm for fechado
-            this.Show();
+
+            FormTopicosDeAssunto tda = new FormTopicosDeAssunto(user, perfil);
+            tda.Show();
+        }
+
+        private void ConsultasButton_Click(object sender, EventArgs e)
+        {
+            variaveis.CurrentForm = ActiveForm;
+            this.Hide();
+
+            FormConsultas c = new FormConsultas(user, perfil);
+            c.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

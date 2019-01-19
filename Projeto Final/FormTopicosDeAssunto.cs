@@ -13,14 +13,20 @@ namespace Projeto_Final
 {
     public partial class FormTopicosDeAssunto : Form
     {
+        string user;
+        int perfil;
+
         string caminho = "assuntos.txt";
         int contAssunto = 0;
 
-        public FormTopicosDeAssunto()
+        public FormTopicosDeAssunto(string user, int perfil)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
+
+            this.user = user;
+            this.perfil = perfil;
 
             if (File.Exists(caminho))
             {
@@ -56,6 +62,34 @@ namespace Projeto_Final
             sw.Close();
 
             listBox1.Items.Add(novoAssunto);
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
+        }
+
+        private void RetrocederButton_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

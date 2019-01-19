@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.AssuntoComboBox = new System.Windows.Forms.ComboBox();
-            this.SalasComboBox = new System.Windows.Forms.ComboBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.PesquisaBtn = new System.Windows.Forms.Button();
+            this.AssuntoComboBox = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,81 +44,130 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.SalasComboBox = new System.Windows.Forms.ComboBox();
             this.ExitRegisterButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.line1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.LogOutButton = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.RetrocederButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.AssuntoComboBox);
-            this.panel2.Controls.Add(this.SalasComboBox);
-            this.panel2.Controls.Add(this.PesquisaBtn);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.ExitRegisterButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(283, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 366);
+            this.panel2.Size = new System.Drawing.Size(726, 622);
             this.panel2.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.PesquisaBtn);
+            this.groupBox1.Controls.Add(this.AssuntoComboBox);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.SalasComboBox);
+            this.groupBox1.Location = new System.Drawing.Point(78, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(609, 492);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(413, 43);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(318, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(90, 25);
             this.label2.TabIndex = 14;
             this.label2.Text = "Assunto:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(425, 15);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(331, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 13;
             this.label1.Text = "Salas:";
             // 
-            // AssuntoComboBox
+            // checkBox2
             // 
-            this.AssuntoComboBox.FormattingEnabled = true;
-            this.AssuntoComboBox.Items.AddRange(new object[] {
-            "----- Sem filtro -----"});
-            this.AssuntoComboBox.Location = new System.Drawing.Point(467, 40);
-            this.AssuntoComboBox.Name = "AssuntoComboBox";
-            this.AssuntoComboBox.Size = new System.Drawing.Size(121, 21);
-            this.AssuntoComboBox.TabIndex = 12;
-            this.AssuntoComboBox.Text = "----- Sem filtro -----";
-            // 
-            // SalasComboBox
-            // 
-            this.SalasComboBox.FormattingEnabled = true;
-            this.SalasComboBox.Items.AddRange(new object[] {
-            "----- Sem filtro -----"});
-            this.SalasComboBox.Location = new System.Drawing.Point(467, 12);
-            this.SalasComboBox.Name = "SalasComboBox";
-            this.SalasComboBox.Size = new System.Drawing.Size(121, 21);
-            this.SalasComboBox.TabIndex = 11;
-            this.SalasComboBox.Text = "----- Sem filtro -----";
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(29, 79);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(132, 29);
+            this.checkBox2.TabIndex = 8;
+            this.checkBox2.Text = "Concluidos";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // PesquisaBtn
             // 
-            this.PesquisaBtn.Location = new System.Drawing.Point(256, 331);
+            this.PesquisaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PesquisaBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.PesquisaBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.PesquisaBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.PesquisaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PesquisaBtn.Location = new System.Drawing.Point(245, 420);
+            this.PesquisaBtn.Margin = new System.Windows.Forms.Padding(4);
             this.PesquisaBtn.Name = "PesquisaBtn";
-            this.PesquisaBtn.Size = new System.Drawing.Size(75, 23);
+            this.PesquisaBtn.Size = new System.Drawing.Size(135, 58);
             this.PesquisaBtn.TabIndex = 10;
             this.PesquisaBtn.Text = "Pesquisar";
-            this.PesquisaBtn.UseVisualStyleBackColor = true;
+            this.PesquisaBtn.UseVisualStyleBackColor = false;
             this.PesquisaBtn.Click += new System.EventHandler(this.PesquisaBtn_Click);
+            // 
+            // AssuntoComboBox
+            // 
+            this.AssuntoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AssuntoComboBox.FormattingEnabled = true;
+            this.AssuntoComboBox.Items.AddRange(new object[] {
+            "----- Sem filtro -----"});
+            this.AssuntoComboBox.Location = new System.Drawing.Point(416, 76);
+            this.AssuntoComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.AssuntoComboBox.Name = "AssuntoComboBox";
+            this.AssuntoComboBox.Size = new System.Drawing.Size(160, 24);
+            this.AssuntoComboBox.TabIndex = 12;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(29, 42);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(128, 29);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Pendentes";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -129,9 +180,10 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(177, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 126);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(411, 231);
+            this.dataGridView1.Size = new System.Drawing.Size(548, 284);
             this.dataGridView1.TabIndex = 9;
             // 
             // Column1
@@ -176,29 +228,17 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
-            // checkBox2
+            // SalasComboBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(254, 47);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(78, 17);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "Concluidos";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(254, 23);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Pendentes";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.SalasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SalasComboBox.FormattingEnabled = true;
+            this.SalasComboBox.Items.AddRange(new object[] {
+            "----- Sem filtro -----"});
+            this.SalasComboBox.Location = new System.Drawing.Point(416, 44);
+            this.SalasComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SalasComboBox.Name = "SalasComboBox";
+            this.SalasComboBox.Size = new System.Drawing.Size(160, 24);
+            this.SalasComboBox.TabIndex = 11;
             // 
             // ExitRegisterButton
             // 
@@ -210,26 +250,156 @@
             this.ExitRegisterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitRegisterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitRegisterButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitRegisterButton.Location = new System.Drawing.Point(533, 342);
-            this.ExitRegisterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitRegisterButton.Location = new System.Drawing.Point(711, 421);
+            this.ExitRegisterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitRegisterButton.Name = "ExitRegisterButton";
-            this.ExitRegisterButton.Size = new System.Drawing.Size(65, 22);
+            this.ExitRegisterButton.Size = new System.Drawing.Size(87, 27);
             this.ExitRegisterButton.TabIndex = 6;
             this.ExitRegisterButton.Text = "X";
             this.ExitRegisterButton.UseVisualStyleBackColor = false;
             this.ExitRegisterButton.Click += new System.EventHandler(this.ExitRegisterButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.line1);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.LogOutButton);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.RetrocederButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(283, 622);
+            this.panel1.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(81, 166);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 29);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "do Pedido";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(98, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 29);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Estado";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.line1.Location = new System.Drawing.Point(3, 119);
+            this.line1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.line1.Multiline = true;
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(277, 10);
+            this.line1.TabIndex = 36;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(90, 25);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 29);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Serviços";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.textBox1.Location = new System.Drawing.Point(3, 207);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(277, 10);
+            this.textBox1.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(186, 591);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 24);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "ESMAD";
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.FlatAppearance.BorderSize = 0;
+            this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LogOutButton.Location = new System.Drawing.Point(2, 349);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(280, 54);
+            this.LogOutButton.TabIndex = 35;
+            this.LogOutButton.Text = "LogOut";
+            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(61, 66);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(164, 29);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "de Informática";
+            // 
+            // RetrocederButton
+            // 
+            this.RetrocederButton.FlatAppearance.BorderSize = 0;
+            this.RetrocederButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RetrocederButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetrocederButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.RetrocederButton.Location = new System.Drawing.Point(0, 263);
+            this.RetrocederButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RetrocederButton.Name = "RetrocederButton";
+            this.RetrocederButton.Size = new System.Drawing.Size(283, 54);
+            this.RetrocederButton.TabIndex = 34;
+            this.RetrocederButton.Text = "Retroceder";
+            this.RetrocederButton.UseVisualStyleBackColor = true;
+            this.RetrocederButton.Click += new System.EventHandler(this.RetrocederButton_Click);
+            // 
             // FormEstadoDoPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(1009, 622);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEstadoDoPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEstadoDoPedido";
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -253,5 +423,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox line1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button LogOutButton;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button RetrocederButton;
     }
 }

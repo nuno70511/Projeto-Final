@@ -14,16 +14,28 @@ namespace Projeto_Final
     public partial class FormNotificaçoes : Form
     {
         string user;
+        int perfil;
 
-        public FormNotificaçoes(string user)
+        public FormNotificaçoes(string user, int perfil)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
 
-            DocenteTextBox.Text = user;
-
             this.user = user;
+            this.perfil = perfil;
+
+
+            /* O administrador pode definir o username */
+            if (perfil == 0)
+            {
+                DocenteTextBox.Enabled = true;
+            }
+            else
+            {
+                DocenteTextBox.Enabled = false;
+                DocenteTextBox.Text = user;
+            }
 
             /* Carregar comboBoxs */
             string fichSalas = "salas.txt";
@@ -46,7 +58,7 @@ namespace Projeto_Final
                 while ((ln = sr.ReadLine()) != null)
                 {
                     string[] split = ln.Split(';');
-                    AssuntoComboBox.Items.Add(split[1]);
+                    AssuntoComboBox.Items.Add(split[0]);
                 }
                 sr.Close();
             }
@@ -99,14 +111,14 @@ namespace Projeto_Final
             /* A alterar posteriormente pelos Servicos de Informatica */
             string resposta = "N/a";
 
-            sw.WriteLine(DocenteTextBox.Text + ";" + ';' + sala + ';' + assunto + ';' + comentario + ';' + data + ';' + hora + ';' + estado + ';' + resposta);
+            sw.WriteLine(DocenteTextBox.Text + ';' + sala + ';' + assunto + ';' + comentario + ';' + data + ';' + hora + ';' + estado + ';' + resposta);
 
             sw.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             variaveis.CurrentForm.Show();
         }
 
@@ -121,6 +133,20 @@ namespace Projeto_Final
         private void ExitRegisterButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

@@ -58,6 +58,10 @@ namespace Projeto_Final
             {
                 MessageBox.Show("A conta a que pretende aceder encontra-se inativa.", titLgnFailed);
             }
+            else if (user == "" || pw == "")
+            {
+                MessageBox.Show("Preencha os campos.", titLgnFailed);
+            }
             else
             {
                 MessageBox.Show("A conta nao existe.", titLgnFailed);

@@ -13,22 +13,24 @@ namespace Projeto_Final
     public partial class MenuProfessor : Form
     {
         string user;
+        int perfil;
 
-        public MenuProfessor(string user)
+        public MenuProfessor(string user, int perfil)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
 
             this.user = user;
+            this.perfil = perfil;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form CurrentForm = Form.ActiveForm;
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
 
-            FormNotificaçoes fn = new FormNotificaçoes(user);
+            FormNotificaçoes fn = new FormNotificaçoes(user, perfil);
             fn.Show();
         }
 
@@ -50,7 +52,7 @@ namespace Projeto_Final
             Form CurrentForm = Form.ActiveForm;
             this.Hide();
 
-            FormEstadoDoPedido edp = new FormEstadoDoPedido(user);
+            FormEstadoDoPedido edp = new FormEstadoDoPedido(user, perfil);
             edp.Show();
         }
     }

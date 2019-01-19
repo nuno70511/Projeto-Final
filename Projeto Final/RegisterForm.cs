@@ -27,7 +27,7 @@ namespace Projeto_Final
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             string user = UserTextBox.Text;
-            string email = EmailTextBox.Text;
+            string email = EmailTextBox.Text.ToLower();
             string pw = PwTextBox.Text;
 
 
@@ -43,11 +43,15 @@ namespace Projeto_Final
             }
             else if (!FormatoEmail(email))
             {
-                MessageBox.Show("O email nao esta no formato correto.", titRegFailed);
+                MessageBox.Show("O endereco nao se encontra no formato correto.", titRegFailed);
             }
             else if (pw.Length < 8)
             {
                 MessageBox.Show("A password tem de ter no minimo 8 caracteres.", titRegFailed);
+            }
+            else if (CharEspeciais(pw))
+            {
+                MessageBox.Show("A password contem caracteres especiais.", titRegFailed);
             }
             else if (VerifyPwTextBox.Text != pw)
             {
@@ -59,7 +63,7 @@ namespace Projeto_Final
 
                 if (registo.UsernameElegivel() == 1)
                 {
-                    MessageBox.Show("Conta criada com sucesso.", "Secesso!");
+                    MessageBox.Show("Conta criada com sucesso.", "Sucesso!");
 
                     this.Hide();
                     variaveis.CurrentForm.Show();
@@ -71,9 +75,9 @@ namespace Projeto_Final
             }
         }
 
-        private bool CharEspeciais(string user)
+        public static bool CharEspeciais(string input)
         {
-            foreach (char caracter in user)
+            foreach (char caracter in input)
             {
                 if (!char.IsLetterOrDigit(caracter))
                 {
@@ -84,7 +88,7 @@ namespace Projeto_Final
             return false;
         }
 
-        private bool FormatoEmail(string email)
+        public static bool FormatoEmail(string email)
         {
             try
             {

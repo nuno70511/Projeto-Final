@@ -14,14 +14,16 @@ namespace Projeto_Final
     public partial class FormEstadoDoPedido : Form
     {
         string user;
+        int perfil;
 
-        public FormEstadoDoPedido(string user)
+        public FormEstadoDoPedido(string user, int perfil)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
 
             this.user = user;
+            this.perfil = perfil;
 
             /* Carregar comboBoxs */
             string fichSalas = "salas.txt";
@@ -44,7 +46,7 @@ namespace Projeto_Final
                 while ((ln = sr.ReadLine()) != null)
                 {
                     string[] dados = ln.Split(';');
-                    AssuntoComboBox.Items.Add(dados[1]);
+                    AssuntoComboBox.Items.Add(dados[0]);
                 }
                 sr.Close();
             }
@@ -101,6 +103,21 @@ namespace Projeto_Final
         private void ExitRegisterButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            //NÃO ESTA ABRIR O FORM ANTERIOR. ELE VOLTA AO DO LOGIN COM OS DADOS JA INSERIDOS
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }

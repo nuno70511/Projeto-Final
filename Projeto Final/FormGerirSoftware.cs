@@ -13,14 +13,20 @@ namespace Projeto_Final
 {
     public partial class FormGerirSoftware : Form
     {
+        string user;
+        int perfil;
+
         public static string file = "salas.txt";
         public string caminho = @"salas\";
 
-        public FormGerirSoftware()
+        public FormGerirSoftware(string user, int perfil)
         {
             InitializeComponent();
 
             this.FormBorderStyle = 0;
+
+            this.user = user;
+            this.perfil = perfil;
 
             string[] importar = File.ReadAllLines(file);
 
@@ -52,7 +58,7 @@ namespace Projeto_Final
 
             string software = SoftwareTextBox.Text;
             string data = DataTimePicker.Value.ToString("dd-MM-yyyy");
-            string hora = HoraTimePicker.Value.ToString("HH:mm");
+            string hora = HoraTimePicker.Value.ToString("HH:mm:ss");
             string licenca = LicençaComboBox.Text;
 
             string registo = software + ";" + data + ";" + hora + ";" + licenca;
@@ -75,6 +81,20 @@ namespace Projeto_Final
                     SalaComboBox.Items.Add(salas[i]);
                 }
             }
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            InitialForm ini = new InitialForm();
+            ini.Show();
         }
     }
 }
