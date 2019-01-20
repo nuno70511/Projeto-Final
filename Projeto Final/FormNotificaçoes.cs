@@ -63,7 +63,6 @@ namespace Projeto_Final
                 sr.Close();
             }
 
-
             /* Mensagem de boas-vindas */
             string mensagem = metodos.GerarBoasVindas(user);
             StatusLabel.Text = mensagem;

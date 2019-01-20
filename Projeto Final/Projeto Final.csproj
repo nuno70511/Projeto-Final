@@ -94,6 +94,12 @@
     <Compile Include="FormPerfis.Designer.cs">
       <DependentUpon>FormPerfis.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRespostasNotificaçoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRespostasNotificaçoes.Designer.cs">
+      <DependentUpon>FormRespostasNotificaçoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTopicosDeAssunto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPerfis.resx">
       <DependentUpon>FormPerfis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRespostasNotificaçoes.resx">
+      <DependentUpon>FormRespostasNotificaçoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTopicosDeAssunto.resx">
       <DependentUpon>FormTopicosDeAssunto.cs</DependentUpon>

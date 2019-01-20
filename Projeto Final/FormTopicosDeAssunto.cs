@@ -37,6 +37,10 @@ namespace Projeto_Final
                     contAssunto++;
                 }
             }
+
+            /* Mensagem de boas-vindas */
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
         }
 
         private void AdicionarButton_Click(object sender, EventArgs e)

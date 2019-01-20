@@ -15,6 +15,8 @@ namespace Projeto_Final
     {
         string user;
         int perfil;
+        
+        string fichNotif = "notificaçoes.txt";
 
         public FormEstadoDoPedido(string user, int perfil)
         {
@@ -24,6 +26,11 @@ namespace Projeto_Final
 
             this.user = user;
             this.perfil = perfil;
+            
+            if (perfil == 2)
+            {
+                dataGridView1.Columns[0].Visible = false;
+            }
 
             /* Carregar comboBoxs */
             string fichSalas = "salas.txt";
@@ -50,21 +57,24 @@ namespace Projeto_Final
                 }
                 sr.Close();
             }
+
+            /* Mensagem de boas-vindas */
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
         }
 
         private void PesquisaBtn_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
 
-            string fichNotif = "notificaçoes.txt";
-
             if (File.Exists(fichNotif))
             {
-                StreamReader sr = File.OpenText(fichNotif);
-                string ln = "";
-                while ((ln = sr.ReadLine()) != null)
+                string[] lerNotif = File.ReadAllLines(fichNotif);
+
+                StreamWriter sw = File.CreateText("temp.txt");
+                for (int i = 0; i < lerNotif.Length; i++)
                 {
-                    string[] dados = ln.Split(';');
+                    string[] dados = lerNotif[i].Split(';');
 
                     /*
                      * Indices:
@@ -75,7 +85,7 @@ namespace Projeto_Final
                      * 
                      */
 
-                    if (dados[0] == user)
+                    if ((dados[0] == user && perfil == 2) || perfil != 2)
                     {
                         if ((checkBox1.Checked == true && checkBox2.Checked == false && dados[6] == "Pendente") 
                             || (checkBox1.Checked == false && checkBox2.Checked == true && dados[6] == "Concluido")
@@ -90,34 +100,72 @@ namespace Projeto_Final
                                 /* Ambas as comboBox aplicarem filtros */
                                 || (SalasComboBox.Text != SalasComboBox.Items[0].ToString() && dados[1] == SalasComboBox.Text) && (AssuntoComboBox.Text != AssuntoComboBox.Items[0].ToString() && dados[2] == AssuntoComboBox.Text))
                             {
-                                dataGridView1.Rows.Insert(0, dados[6], dados[3], dados[7], dados[2], dados[1], dados[4], dados[5]);
+
+                                /* Esconder o nome de utilizador na dataGrid caso seja professor */
+                                if (perfil == 2)
+                                {
+                                    dataGridView1.Rows.Insert(0, dados[6], dados[2], dados[1], dados[4], dados[5]);
+                                }
+                                else
+                                {
+                                    dataGridView1.Rows.Insert(0, dados[0], dados[6], dados[2], dados[1], dados[4], dados[5]);
+                                }
+
+                                sw.WriteLine(dados[0] + ';' + dados[1] + ';' + dados[2] + ';' + dados[3] + ';' + dados[4] + ';' + dados[5] + ';' + dados[6] + ';' + dados[7] + ';' + i);
                             }
                         }
                     }
                 }
-
-                sr.Close();
+                sw.Close();
             }
         }
 
         private void ExitRegisterButton_Click(object sender, EventArgs e)
         {
+            File.Delete("temp.txt");
+
             Application.Exit();
         }
 
         private void RetrocederButton_Click(object sender, EventArgs e)
         {
-            //NÃO ESTA ABRIR O FORM ANTERIOR. ELE VOLTA AO DO LOGIN COM OS DADOS JA INSERIDOS
+            File.Delete("temp.txt");
+
             this.Hide();
             variaveis.CurrentForm.Show();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
+            File.Delete("temp.txt");
+
             this.Close();
 
             InitialForm ini = new InitialForm();
             ini.Show();
+        }
+        
+        /* NAO apagar */
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void VerDetalhesButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int indice = dataGridView1.CurrentCell.RowIndex;
+
+                string[] temp = File.ReadAllLines("temp.txt");
+                string[] ut = temp[indice].Split(';');
+
+                FormRespostasNotificaçoes frn = new FormRespostasNotificaçoes(user, perfil, ut[0], ut[1], ut[2], ut[3], ut[4], ut[5], ut[6], ut[7], ut[8]);
+                frn.Show();
+            }
+            catch
+            {
+                toolStripStatusLabel1.Text = "Nao foi possivel encontrar a notificacao";
+            }
         }
     }
 }

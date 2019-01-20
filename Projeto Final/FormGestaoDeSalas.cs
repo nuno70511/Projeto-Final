@@ -33,25 +33,26 @@ namespace Projeto_Final
             {
                 listBox1.Items.Add(importar[i]);
             }
+
+            /* Mensagem de boas-vindas */
+            string mensagem = metodos.GerarBoasVindas(user);
+            StatusLabel.Text = mensagem;
         }
 
         private void AdicionarButton_Click(object sender, EventArgs e)
         {
             string[] importar = File.ReadAllLines(file);
-
-            for (int i = 0; i < importar.Length; i++)
+            for (int i = 0; i < listBox1.Items.Count; i++)
             {
-                if (importar[i] == textBox1.Text)
+                if (SalaTextBox.Text == importar[i])
                 {
-                    MessageBox.Show("Sala já em uso.");
+                    MessageBox.Show("A sala já está em uso.");
+                    listBox1.Items.RemoveAt(listBox1.Items.Count - 1);
                     break;
                 }
-                else
-                {
-                    listBox1.Items.Add(textBox1.Text);
-                    textBox1.Text = "";
-                }
             }
+            listBox1.Items.Add(SalaTextBox.Text);
+            SalaTextBox.Text = "";
         }
 
         private void RemoverButton_Click(object sender, EventArgs e)

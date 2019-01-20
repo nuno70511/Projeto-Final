@@ -23,6 +23,9 @@ namespace Projeto_Final
 
             this.user = user;
             this.perfil = perfil;
+
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -83,7 +86,7 @@ namespace Projeto_Final
             variaveis.CurrentForm = ActiveForm;
             this.Hide();
 
-            FormPerfis fp = new FormPerfis();
+            FormPerfis fp = new FormPerfis(user);
             fp.Show();
         }
     }

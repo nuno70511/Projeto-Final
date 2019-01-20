@@ -23,6 +23,12 @@ namespace Projeto_Final
 
             this.user = user;
             this.perfil = perfil;
+
+            /* Mensagem de boas-vindas */
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
+
+            textBox1.Text = user;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,6 +73,17 @@ namespace Projeto_Final
 
             InitialForm ini = new InitialForm();
             ini.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            /*
+            variaveis.CurrentForm = ActiveForm;
+            this.Hide();
+
+            FormRespostasNotificaçoes rn = new FormRespostasNotificaçoes(user);
+            rn.Show();
+            */
         }
     }
 }

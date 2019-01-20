@@ -23,6 +23,12 @@ namespace Projeto_Final
 
             this.user = user;
             this.perfil = perfil;
+
+            textBox1.Text = user;
+
+            /* Mensagem de boas-vindas */
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,7 +55,7 @@ namespace Projeto_Final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form CurrentForm = Form.ActiveForm;
+            variaveis.CurrentForm = ActiveForm;
             this.Hide();
 
             FormEstadoDoPedido edp = new FormEstadoDoPedido(user, perfil);

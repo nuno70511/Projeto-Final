@@ -118,7 +118,10 @@
             // 
             // RetrocederButton
             // 
+            this.RetrocederButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.RetrocederButton.FlatAppearance.BorderSize = 0;
+            this.RetrocederButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.RetrocederButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
             this.RetrocederButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RetrocederButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RetrocederButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -133,7 +136,10 @@
             // 
             // LogOutButton
             // 
+            this.LogOutButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.LogOutButton.FlatAppearance.BorderSize = 0;
+            this.LogOutButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.LogOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -238,6 +244,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 595);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.statusStrip1.Size = new System.Drawing.Size(726, 25);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 1;
@@ -265,6 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1009, 622);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTopicosDeAssunto));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AdicionarButton = new System.Windows.Forms.Button();
             this.AssuntoTextBox = new System.Windows.Forms.TextBox();
@@ -46,6 +48,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.RetrocederButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,13 +56,35 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
+            this.panel2.Controls.Add(this.statusStrip1);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(283, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(212, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(726, 622);
+            this.panel2.Size = new System.Drawing.Size(545, 505);
             this.panel2.TabIndex = 11;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 483);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.statusStrip1.Size = new System.Drawing.Size(545, 22);
+            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // groupBox1
             // 
@@ -67,11 +92,11 @@
             this.groupBox1.Controls.Add(this.AssuntoTextBox);
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.AssuntoLabel);
-            this.groupBox1.Location = new System.Drawing.Point(32, 76);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(24, 62);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(665, 440);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(499, 358);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -83,10 +108,10 @@
             this.AdicionarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
             this.AdicionarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdicionarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdicionarButton.Location = new System.Drawing.Point(279, 116);
-            this.AdicionarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AdicionarButton.Location = new System.Drawing.Point(209, 94);
+            this.AdicionarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AdicionarButton.Name = "AdicionarButton";
-            this.AdicionarButton.Size = new System.Drawing.Size(135, 58);
+            this.AdicionarButton.Size = new System.Drawing.Size(101, 47);
             this.AdicionarButton.TabIndex = 25;
             this.AdicionarButton.Text = "Adicionar";
             this.AdicionarButton.UseVisualStyleBackColor = false;
@@ -94,31 +119,27 @@
             // 
             // AssuntoTextBox
             // 
-            this.AssuntoTextBox.Location = new System.Drawing.Point(174, 56);
-            this.AssuntoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.AssuntoTextBox.Location = new System.Drawing.Point(130, 46);
             this.AssuntoTextBox.Multiline = true;
             this.AssuntoTextBox.Name = "AssuntoTextBox";
-            this.AssuntoTextBox.Size = new System.Drawing.Size(419, 28);
+            this.AssuntoTextBox.Size = new System.Drawing.Size(315, 24);
             this.AssuntoTextBox.TabIndex = 24;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(88, 211);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Location = new System.Drawing.Point(66, 171);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(505, 180);
+            this.listBox1.Size = new System.Drawing.Size(380, 147);
             this.listBox1.TabIndex = 23;
             // 
             // AssuntoLabel
             // 
             this.AssuntoLabel.AutoSize = true;
             this.AssuntoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssuntoLabel.Location = new System.Drawing.Point(83, 56);
-            this.AssuntoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AssuntoLabel.Location = new System.Drawing.Point(62, 46);
             this.AssuntoLabel.Name = "AssuntoLabel";
-            this.AssuntoLabel.Size = new System.Drawing.Size(90, 25);
+            this.AssuntoLabel.Size = new System.Drawing.Size(72, 20);
             this.AssuntoLabel.TabIndex = 14;
             this.AssuntoLabel.Text = "Assunto:";
             // 
@@ -136,9 +157,9 @@
             this.panel1.Controls.Add(this.RetrocederButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 622);
+            this.panel1.Size = new System.Drawing.Size(212, 505);
             this.panel1.TabIndex = 10;
             // 
             // label5
@@ -146,9 +167,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(78, 166);
+            this.label5.Location = new System.Drawing.Point(58, 135);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 29);
+            this.label5.Size = new System.Drawing.Size(105, 24);
             this.label5.TabIndex = 41;
             this.label5.Text = "de Assunto";
             // 
@@ -157,20 +179,21 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(95, 136);
+            this.label6.Location = new System.Drawing.Point(71, 110);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 29);
+            this.label6.Size = new System.Drawing.Size(83, 24);
             this.label6.TabIndex = 40;
             this.label6.Text = "Tópicos ";
             // 
             // line1
             // 
             this.line1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
-            this.line1.Location = new System.Drawing.Point(3, 119);
-            this.line1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.line1.Location = new System.Drawing.Point(2, 97);
+            this.line1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.line1.Multiline = true;
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(277, 10);
+            this.line1.Size = new System.Drawing.Size(209, 9);
             this.line1.TabIndex = 36;
             // 
             // label13
@@ -178,20 +201,21 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(82, 25);
+            this.label13.Location = new System.Drawing.Point(62, 20);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 29);
+            this.label13.Size = new System.Drawing.Size(82, 24);
             this.label13.TabIndex = 38;
             this.label13.Text = "Serviços";
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(172)))), ((int)(((byte)(193)))));
-            this.textBox1.Location = new System.Drawing.Point(6, 207);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(4, 168);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 10);
+            this.textBox1.Size = new System.Drawing.Size(209, 9);
             this.textBox1.TabIndex = 37;
             // 
             // label8
@@ -199,22 +223,26 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(186, 591);
+            this.label8.Location = new System.Drawing.Point(140, 480);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 24);
+            this.label8.Size = new System.Drawing.Size(66, 18);
             this.label8.TabIndex = 33;
             this.label8.Text = "ESMAD";
             // 
             // LogOutButton
             // 
+            this.LogOutButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.LogOutButton.FlatAppearance.BorderSize = 0;
+            this.LogOutButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.LogOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LogOutButton.Location = new System.Drawing.Point(2, 349);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LogOutButton.Location = new System.Drawing.Point(2, 284);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(280, 54);
+            this.LogOutButton.Size = new System.Drawing.Size(210, 44);
             this.LogOutButton.TabIndex = 35;
             this.LogOutButton.Text = "LogOut";
             this.LogOutButton.UseVisualStyleBackColor = true;
@@ -225,22 +253,26 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(61, 66);
+            this.label12.Location = new System.Drawing.Point(46, 54);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 29);
+            this.label12.Size = new System.Drawing.Size(127, 24);
             this.label12.TabIndex = 39;
             this.label12.Text = "de Informática";
             // 
             // RetrocederButton
             // 
+            this.RetrocederButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
             this.RetrocederButton.FlatAppearance.BorderSize = 0;
+            this.RetrocederButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.RetrocederButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
             this.RetrocederButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RetrocederButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RetrocederButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RetrocederButton.Location = new System.Drawing.Point(0, 263);
-            this.RetrocederButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RetrocederButton.Location = new System.Drawing.Point(0, 214);
+            this.RetrocederButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RetrocederButton.Name = "RetrocederButton";
-            this.RetrocederButton.Size = new System.Drawing.Size(283, 54);
+            this.RetrocederButton.Size = new System.Drawing.Size(212, 44);
             this.RetrocederButton.TabIndex = 34;
             this.RetrocederButton.Text = "Retroceder";
             this.RetrocederButton.UseVisualStyleBackColor = true;
@@ -248,17 +280,20 @@
             // 
             // FormTopicosDeAssunto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 622);
+            this.ClientSize = new System.Drawing.Size(757, 505);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormTopicosDeAssunto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTopicosDeAssunto";
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -285,5 +320,7 @@
         private System.Windows.Forms.Button RetrocederButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

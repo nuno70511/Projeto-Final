@@ -41,8 +41,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.ExitAppButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -62,33 +62,33 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(60, 342);
+            this.label3.Location = new System.Drawing.Point(45, 342);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 29);
+            this.label3.Size = new System.Drawing.Size(194, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "de Informática";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(90, 278);
+            this.label2.Location = new System.Drawing.Point(75, 278);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 29);
+            this.label2.Size = new System.Drawing.Size(126, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "de Salas";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(90, 214);
+            this.label1.Location = new System.Drawing.Point(75, 214);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 29);
+            this.label1.Size = new System.Drawing.Size(127, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Software";
             // 
@@ -133,7 +133,11 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.BackColor = System.Drawing.Color.Silver;
+            this.LoginButton.BackColor = System.Drawing.Color.Transparent;
+            this.LoginButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.Location = new System.Drawing.Point(253, 302);
             this.LoginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -198,6 +202,24 @@
             this.panel2.Size = new System.Drawing.Size(727, 622);
             this.panel2.TabIndex = 3;
             // 
+            // ExitAppButton
+            // 
+            this.ExitAppButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitAppButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.ExitAppButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.ExitAppButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
+            this.ExitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitAppButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitAppButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ExitAppButton.Location = new System.Drawing.Point(572, 556);
+            this.ExitAppButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitAppButton.Name = "ExitAppButton";
+            this.ExitAppButton.Size = new System.Drawing.Size(133, 46);
+            this.ExitAppButton.TabIndex = 4;
+            this.ExitAppButton.Text = "X";
+            this.ExitAppButton.UseVisualStyleBackColor = false;
+            this.ExitAppButton.Click += new System.EventHandler(this.ExitRegisterButton_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
@@ -211,24 +233,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 622);
             this.panel1.TabIndex = 2;
-            // 
-            // ExitAppButton
-            // 
-            this.ExitAppButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitAppButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
-            this.ExitAppButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
-            this.ExitAppButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(148)))), ((int)(((byte)(193)))));
-            this.ExitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitAppButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitAppButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ExitAppButton.Location = new System.Drawing.Point(572, 556);
-            this.ExitAppButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ExitAppButton.Name = "ExitAppButton";
-            this.ExitAppButton.Size = new System.Drawing.Size(133, 46);
-            this.ExitAppButton.TabIndex = 4;
-            this.ExitAppButton.Text = "X";
-            this.ExitAppButton.UseVisualStyleBackColor = false;
-            this.ExitAppButton.Click += new System.EventHandler(this.ExitRegisterButton_Click);
             // 
             // InitialForm
             // 

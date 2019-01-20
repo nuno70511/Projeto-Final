@@ -13,13 +13,20 @@ namespace Projeto_Final
 {
     public partial class FormGerirPerfis : Form
     {
+        string user;
+
         string fileUsers = "users.txt";
 
-        public FormGerirPerfis()
+        public FormGerirPerfis(string user)
         {
             InitializeComponent();
 
+            this.user = user;
+
             AtualizarDataGrid();
+
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
         }
 
         private void GestaoDeSalasButton_Click(object sender, EventArgs e)
@@ -80,10 +87,10 @@ namespace Projeto_Final
                 {
                     string[] split = ln.Split(';');
 
-                    if (procura.StartsWith("u:") && (procura.IndexOf(split[0]) != -1)
-                        || procura.StartsWith("m:") && (procura.IndexOf(split[1]) != -1)
-                        || procura.StartsWith("p:") && (procura.IndexOf(split[3]) != -1)
-                        || procura.StartsWith("e:") && (procura.IndexOf(split[4]) != -1))
+                    if (procura.StartsWith("u:") && split[0].ToLower().Contains(procura.Substring(2, procura.Length - 2).ToLower())
+                        || procura.StartsWith("m:") && split[1].ToLower().Contains(procura.Substring(2, procura.Length - 2).ToLower())
+                        || procura.StartsWith("p:") && split[3].ToLower().Contains(procura.Substring(2, procura.Length - 2).ToLower())
+                        || procura.StartsWith("e:") && split[4].ToLower().Contains(procura.Substring(2, procura.Length - 2).ToLower()))
                     {
                         dataGridView1.Rows.Add(split[0], split[1], SetPerfil(split[3]), SetEstado(split[4]));
                     }

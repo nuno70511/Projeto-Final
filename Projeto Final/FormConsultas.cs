@@ -34,6 +34,10 @@ namespace Projeto_Final
             {
                 listBox1.Items.Add(importar[i]);
             }
+
+            /* Mensagem de boas-vindas */
+            string mensagem = metodos.GerarBoasVindas(user);
+            StatusLabel.Text = mensagem;
         }
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)

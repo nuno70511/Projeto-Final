@@ -12,9 +12,16 @@ namespace Projeto_Final
 {
     public partial class FormPerfis : Form
     {
-        public FormPerfis()
+        string user;
+
+        public FormPerfis(string user)
         {
             InitializeComponent();
+
+            this.user = user;
+
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
         }
 
         private void GestaoDeSalasButton_Click(object sender, EventArgs e)
@@ -39,8 +46,14 @@ namespace Projeto_Final
             variaveis.CurrentForm = ActiveForm;
             this.Hide();
 
-            FormGerirPerfis fgp = new FormGerirPerfis();
+            FormGerirPerfis fgp = new FormGerirPerfis(user);
             fgp.Show();
+        }
+
+        private void RetrocederButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            variaveis.CurrentForm.Show();
         }
     }
 }

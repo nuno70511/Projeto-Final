@@ -38,7 +38,11 @@ namespace Projeto_Final
             if (!Directory.Exists("salas"))
             {
                 Directory.CreateDirectory("salas");
-            }        
+            }
+
+            /* Mensagem de boas-vindas */
+            string mensagem = metodos.GerarBoasVindas(user);
+            toolStripStatusLabel1.Text = mensagem;
         }
 
         private void RegistarButton_Click(object sender, EventArgs e)
